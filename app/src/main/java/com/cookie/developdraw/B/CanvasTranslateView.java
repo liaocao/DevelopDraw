@@ -1,4 +1,4 @@
-package com.cookie.developdraw;
+package com.cookie.developdraw.B;
 
 import android.content.Context;
 import android.graphics.Canvas;

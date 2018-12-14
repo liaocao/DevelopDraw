@@ -1,18 +1,17 @@
-package com.cookie.developdraw;
+package com.cookie.developdraw.B;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.graphics.RectF;
 import android.view.View;
 
-public class ClipRectView extends View {
+public class CanvasNoTranslateView extends View {
 
     Context m_context;
 
-    public ClipRectView(Context context) {
+    public CanvasNoTranslateView(Context context) {
         super(context);
         // TODO Auto-generated constructor stub
 
@@ -25,8 +24,14 @@ public class ClipRectView extends View {
         // TODO Auto-generated method stub
         super.onDraw(canvas);
 
-        canvas.drawColor(Color.RED);
-        canvas.clipRect(new Rect(100, 100, 200, 200));
-        canvas.drawColor(Color.GREEN);
+        //translate 平移,即改变坐标系原点位置
+
+        Paint paint = new Paint();
+        paint.setColor(Color.GREEN);
+        paint.setStyle(Paint.Style.FILL);
+
+//	canvas.translate(100, 100);
+        Rect rect1 = new Rect(0,0,400,220);
+        canvas.drawRect(rect1, paint);
     }
 }

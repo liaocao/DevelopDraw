@@ -1,11 +1,13 @@
-package com.cookie.developdraw;
+package com.cookie.developdraw.A;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.FrameLayout;
 
-public class ADrawRegionActivity extends AppCompatActivity {
+import com.cookie.developdraw.R;
+
+public class ADrawRegionClipActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -13,6 +15,6 @@ public class ADrawRegionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         FrameLayout root=(FrameLayout)findViewById(R.id.root);
-        root.addView(new MyRegionView(this));
+        root.addView(new MyRegionClipView(this));
     }
 }

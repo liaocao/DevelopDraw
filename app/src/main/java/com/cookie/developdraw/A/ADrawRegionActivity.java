@@ -1,12 +1,13 @@
-package com.cookie.developdraw;
+package com.cookie.developdraw.A;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.FrameLayout;
 
-public class ADrawTextPathActivity extends AppCompatActivity {
+import com.cookie.developdraw.R;
+
+public class ADrawRegionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -14,7 +15,6 @@ public class ADrawTextPathActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         FrameLayout root=(FrameLayout)findViewById(R.id.root);
-        root.addView(new TextPathView(this));
+        root.addView(new MyRegionView(this));
     }
-
 }

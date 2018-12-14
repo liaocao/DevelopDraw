@@ -16,13 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ADrawSimpleActivity"/>
-        <activity android:name=".ADrawLineActivity"/>
-        <activity android:name=".ADrawTextPathActivity"/>
-        <activity android:name=".ADrawRegionActivity"/>
-        <activity android:name=".ADrawRegionClipActivity"/>
-        <activity android:name=".BDrawTranslateActivity"/>
-        <activity android:name=".BClipRectActivity"/>
+        <activity android:name=".A.ADrawSimpleActivity" />
+        <activity android:name=".A.ADrawLineActivity" />
+        <activity android:name=".A.ADrawTextPathActivity" />
+        <activity android:name=".A.ADrawRegionActivity" />
+        <activity android:name=".A.ADrawRegionClipActivity" />
+        <activity android:name=".B.BDrawTranslateActivity" />
+        <activity android:name=".B.BClipRectActivity" />
+        <activity android:name=".B.BDrawTextActivity" />
+        <activity android:name=".B.BBezierActivity" />
+        <activity android:name=".B.BPathTouchActivity" />
+        <activity android:name=".B.BPathSmoothActivity" />
+        <activity android:name=".B.BBezierAnimationActivity" />
+        <activity android:name=".C.CDrawLineActivity"></activity>
     </application>
 
 </manifest>

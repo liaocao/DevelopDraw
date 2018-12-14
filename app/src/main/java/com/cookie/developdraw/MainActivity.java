@@ -7,6 +7,20 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.cookie.developdraw.A.ADrawLineActivity;
+import com.cookie.developdraw.A.ADrawRegionActivity;
+import com.cookie.developdraw.A.ADrawRegionClipActivity;
+import com.cookie.developdraw.A.ADrawSimpleActivity;
+import com.cookie.developdraw.A.ADrawTextPathActivity;
+import com.cookie.developdraw.B.BBezierActivity;
+import com.cookie.developdraw.B.BBezierAnimationActivity;
+import com.cookie.developdraw.B.BClipRectActivity;
+import com.cookie.developdraw.B.BDrawTextActivity;
+import com.cookie.developdraw.B.BDrawTranslateActivity;
+import com.cookie.developdraw.B.BPathSmoothActivity;
+import com.cookie.developdraw.B.BPathTouchActivity;
+import com.cookie.developdraw.C.CDrawLineActivity;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -29,6 +43,12 @@ public class MainActivity extends ListActivity {
         addItem(myData, "ADrawRegionClipActivity", new Intent(this, ADrawRegionClipActivity.class));
         addItem(myData, "BDrawTranslateActivity", new Intent(this, BDrawTranslateActivity.class));
         addItem(myData, "BClipRectActivity", new Intent(this, BClipRectActivity.class));
+        addItem(myData, "BDrawTextActivity", new Intent(this, BDrawTextActivity.class));
+        addItem(myData, "BBezierActivity", new Intent(this, BBezierActivity.class));
+        addItem(myData, "BPathTouchActivity", new Intent(this, BPathTouchActivity.class));
+        addItem(myData, "BPathSmoothActivity", new Intent(this, BPathSmoothActivity.class));
+        addItem(myData, "BBezierAnimationActivity", new Intent(this, BBezierAnimationActivity.class));
+        addItem(myData, "CDrawLineActivity", new Intent(this, CDrawLineActivity.class));
         return myData;
     }
 

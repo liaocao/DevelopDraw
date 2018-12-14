@@ -1,10 +1,12 @@
-package com.cookie.developdraw;
+package com.cookie.developdraw.B;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.FrameLayout;
+
+import com.cookie.developdraw.R;
 
 public class BDrawTranslateActivity extends AppCompatActivity {
 
