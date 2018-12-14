@@ -28,7 +28,9 @@
         <activity android:name=".B.BPathTouchActivity" />
         <activity android:name=".B.BPathSmoothActivity" />
         <activity android:name=".B.BBezierAnimationActivity" />
-        <activity android:name=".C.CDrawLineActivity"></activity>
+        <activity android:name=".C.CDrawLineActivity" />
+        <activity android:name=".C.CDashPathEffectViewActivity" />
+        <activity android:name=".C.CDiscretePathEffectActivity"></activity>
     </application>
 
 </manifest>

@@ -19,6 +19,8 @@ import com.cookie.developdraw.B.BDrawTextActivity;
 import com.cookie.developdraw.B.BDrawTranslateActivity;
 import com.cookie.developdraw.B.BPathSmoothActivity;
 import com.cookie.developdraw.B.BPathTouchActivity;
+import com.cookie.developdraw.C.CDashPathEffectViewActivity;
+import com.cookie.developdraw.C.CDiscretePathEffectActivity;
 import com.cookie.developdraw.C.CDrawLineActivity;
 
 import java.util.ArrayList;
@@ -49,6 +51,8 @@ public class MainActivity extends ListActivity {
         addItem(myData, "BPathSmoothActivity", new Intent(this, BPathSmoothActivity.class));
         addItem(myData, "BBezierAnimationActivity", new Intent(this, BBezierAnimationActivity.class));
         addItem(myData, "CDrawLineActivity", new Intent(this, CDrawLineActivity.class));
+        addItem(myData, "CDashPathEffectViewActivity", new Intent(this, CDashPathEffectViewActivity.class));
+        addItem(myData, "CDiscretePathEffectActivity", new Intent(this, CDiscretePathEffectActivity.class));
         return myData;
     }
 
