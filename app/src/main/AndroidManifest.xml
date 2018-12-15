@@ -30,7 +30,15 @@
         <activity android:name=".B.BBezierAnimationActivity" />
         <activity android:name=".C.CDrawLineActivity" />
         <activity android:name=".C.CDashPathEffectViewActivity" />
-        <activity android:name=".C.CDiscretePathEffectActivity"></activity>
+        <activity android:name=".C.CDiscretePathEffectActivity" />
+        <activity android:name=".C.CPathDashPathEffectViewActivity" />
+        <activity android:name=".D.ColorMatrixActivity" />
+        <activity android:name=".D.BitmapColorMatrixActivity" />
+        <activity android:name=".D.ColorBitmapActivity" />
+        <activity android:name=".D.RotateBitmapActivity" />
+        <activity android:name=".D.ColorMatrixHardActivity" />
+        <activity android:name=".D.LightingColorFilterActivity" />
+        <activity android:name=".D.XfermodeActivity"></activity>
     </application>
 
 </manifest>

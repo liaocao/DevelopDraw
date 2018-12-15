@@ -22,6 +22,14 @@ import com.cookie.developdraw.B.BPathTouchActivity;
 import com.cookie.developdraw.C.CDashPathEffectViewActivity;
 import com.cookie.developdraw.C.CDiscretePathEffectActivity;
 import com.cookie.developdraw.C.CDrawLineActivity;
+import com.cookie.developdraw.C.CPathDashPathEffectViewActivity;
+import com.cookie.developdraw.D.BitmapColorMatrixActivity;
+import com.cookie.developdraw.D.ColorBitmapActivity;
+import com.cookie.developdraw.D.ColorMatrixActivity;
+import com.cookie.developdraw.D.ColorMatrixHardActivity;
+import com.cookie.developdraw.D.LightingColorFilterActivity;
+import com.cookie.developdraw.D.RotateBitmapActivity;
+import com.cookie.developdraw.D.XfermodeActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -53,6 +61,15 @@ public class MainActivity extends ListActivity {
         addItem(myData, "CDrawLineActivity", new Intent(this, CDrawLineActivity.class));
         addItem(myData, "CDashPathEffectViewActivity", new Intent(this, CDashPathEffectViewActivity.class));
         addItem(myData, "CDiscretePathEffectActivity", new Intent(this, CDiscretePathEffectActivity.class));
+        addItem(myData, "CPathDashPathEffectViewActivity", new Intent(this, CPathDashPathEffectViewActivity.class));
+        addItem(myData, "============> D <==========", null);
+        addItem(myData, "ColorMatrixActivity", new Intent(this, ColorMatrixActivity.class));
+        addItem(myData, "BitmapColorMatrixActivity", new Intent(this, BitmapColorMatrixActivity.class));
+        addItem(myData, "ColorBitmapActivity", new Intent(this, ColorBitmapActivity.class));
+        addItem(myData, "RotateBitmapActivity", new Intent(this, RotateBitmapActivity.class));
+        addItem(myData, "ColorMatrixHardActivity", new Intent(this, ColorMatrixHardActivity.class));
+        addItem(myData, "LightingColorFilterActivity", new Intent(this, LightingColorFilterActivity.class));
+        addItem(myData, "XfermodeActivity", new Intent(this, XfermodeActivity.class));
         return myData;
     }
 

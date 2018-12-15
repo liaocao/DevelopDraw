@@ -42,7 +42,7 @@ public class DashPathEffectView extends View {
         canvas.drawPath(path,paint);
 
         //画同一条线段,偏移值为15
-        paint.setPathEffect(new DashPathEffect(new float[]{20,10,50,100},dx));
+        paint.setPathEffect(new DashPathEffect(new float[]{20,10,100,100},dx));
         paint.setColor(Color.YELLOW);
         canvas.translate(0,100);
         canvas.drawPath(path,paint);
