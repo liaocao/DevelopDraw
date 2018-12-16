@@ -38,7 +38,15 @@
         <activity android:name=".D.RotateBitmapActivity" />
         <activity android:name=".D.ColorMatrixHardActivity" />
         <activity android:name=".D.LightingColorFilterActivity" />
-        <activity android:name=".D.XfermodeActivity"></activity>
+        <activity android:name=".D.XfermodeActivity" />
+        <activity android:name=".D.PorterDuffXfermodeActivity" />
+        <activity android:name=".D.GooglePorterDuffXfermodeActivity" />
+        <activity android:name=".E.InvertedImageViewActivity" />
+        <activity android:name=".E.DogViewSRCOUTActivity" />
+        <activity android:name=".E.GuaGuaCardViewSRCOUTActivity" />
+        <activity android:name=".E.CircleWaveDSTINActivity" />
+        <activity android:name=".E.HeartMapActivity" />
+        <activity android:name=".E.IrregularWaveViewActivity"></activity>
     </application>
 
 </manifest>

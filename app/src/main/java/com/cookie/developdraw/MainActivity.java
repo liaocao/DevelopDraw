@@ -27,9 +27,17 @@ import com.cookie.developdraw.D.BitmapColorMatrixActivity;
 import com.cookie.developdraw.D.ColorBitmapActivity;
 import com.cookie.developdraw.D.ColorMatrixActivity;
 import com.cookie.developdraw.D.ColorMatrixHardActivity;
+import com.cookie.developdraw.D.GooglePorterDuffXfermodeActivity;
 import com.cookie.developdraw.D.LightingColorFilterActivity;
+import com.cookie.developdraw.D.PorterDuffXfermodeActivity;
 import com.cookie.developdraw.D.RotateBitmapActivity;
 import com.cookie.developdraw.D.XfermodeActivity;
+import com.cookie.developdraw.E.CircleWaveDSTINActivity;
+import com.cookie.developdraw.E.DogViewSRCOUTActivity;
+import com.cookie.developdraw.E.GuaGuaCardViewSRCOUTActivity;
+import com.cookie.developdraw.E.HeartMapActivity;
+import com.cookie.developdraw.E.InvertedImageViewActivity;
+import com.cookie.developdraw.E.IrregularWaveViewActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -70,6 +78,14 @@ public class MainActivity extends ListActivity {
         addItem(myData, "ColorMatrixHardActivity", new Intent(this, ColorMatrixHardActivity.class));
         addItem(myData, "LightingColorFilterActivity", new Intent(this, LightingColorFilterActivity.class));
         addItem(myData, "XfermodeActivity", new Intent(this, XfermodeActivity.class));
+        addItem(myData, "PorterDuffXfermodeActivity", new Intent(this, PorterDuffXfermodeActivity.class));
+        addItem(myData, "GooglePorterDuffXfermodeActivity", new Intent(this, GooglePorterDuffXfermodeActivity.class));
+        addItem(myData, "InvertedImageViewActivity", new Intent(this, InvertedImageViewActivity.class));
+        addItem(myData, "DogViewSRCOUTActivity", new Intent(this, DogViewSRCOUTActivity.class));
+        addItem(myData, "GuaGuaCardViewSRCOUTActivity", new Intent(this, GuaGuaCardViewSRCOUTActivity.class));
+        addItem(myData, "CircleWaveDSTINActivity", new Intent(this, CircleWaveDSTINActivity.class));
+        addItem(myData, "HeartMapActivity", new Intent(this, HeartMapActivity.class));
+        addItem(myData, "IrregularWaveViewActivity", new Intent(this, IrregularWaveViewActivity.class));
         return myData;
     }
 
