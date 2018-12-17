@@ -46,7 +46,11 @@
         <activity android:name=".E.GuaGuaCardViewSRCOUTActivity" />
         <activity android:name=".E.CircleWaveDSTINActivity" />
         <activity android:name=".E.HeartMapActivity" />
-        <activity android:name=".E.IrregularWaveViewActivity"></activity>
+        <activity android:name=".E.IrregularWaveViewActivity" />
+        <activity android:name=".E.SaveLayerXfermodeActivity" />
+        <activity android:name=".F.SaveLayerUseSkewActivity" />
+        <activity android:name=".F.MATRIX_SAVE_FLAG_ViewActivity" />
+        <activity android:name=".G.RedPointActivity"></activity>
     </application>
 
 </manifest>

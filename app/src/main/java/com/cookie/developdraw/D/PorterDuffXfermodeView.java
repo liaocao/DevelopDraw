@@ -36,7 +36,11 @@ public class PorterDuffXfermodeView extends View {
 //        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.LIGHTEN));
 //        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DARKEN));
 //        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.MULTIPLY));
-        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_OUT));
+//        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_OUT));
+//        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_OUT));
+//        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_OVER));
+//        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_ATOP));
+        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
         canvas.drawBitmap(srcBmp, width/2, height/2, mPaint);
         mPaint.setXfermode(null);
 

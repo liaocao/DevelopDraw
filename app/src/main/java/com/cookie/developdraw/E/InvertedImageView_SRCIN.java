@@ -14,8 +14,10 @@ import android.view.View;
 import com.cookie.developdraw.R;
 
 public class InvertedImageView_SRCIN extends View {
+
     private Paint mBitPaint;
     private Bitmap BmpDST,BmpSRC,BmpRevert;
+
     public InvertedImageView_SRCIN(Context context, AttributeSet attrs) {
         super(context, attrs);
         setLayerType(View.LAYER_TYPE_SOFTWARE, null);

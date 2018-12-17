@@ -38,6 +38,10 @@ import com.cookie.developdraw.E.GuaGuaCardViewSRCOUTActivity;
 import com.cookie.developdraw.E.HeartMapActivity;
 import com.cookie.developdraw.E.InvertedImageViewActivity;
 import com.cookie.developdraw.E.IrregularWaveViewActivity;
+import com.cookie.developdraw.E.SaveLayerXfermodeActivity;
+import com.cookie.developdraw.F.MATRIX_SAVE_FLAG_ViewActivity;
+import com.cookie.developdraw.F.SaveLayerUseSkewActivity;
+import com.cookie.developdraw.G.RedPointActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -80,12 +84,21 @@ public class MainActivity extends ListActivity {
         addItem(myData, "XfermodeActivity", new Intent(this, XfermodeActivity.class));
         addItem(myData, "PorterDuffXfermodeActivity", new Intent(this, PorterDuffXfermodeActivity.class));
         addItem(myData, "GooglePorterDuffXfermodeActivity", new Intent(this, GooglePorterDuffXfermodeActivity.class));
+        addItem(myData, "============> E <==========", null);
         addItem(myData, "InvertedImageViewActivity", new Intent(this, InvertedImageViewActivity.class));
         addItem(myData, "DogViewSRCOUTActivity", new Intent(this, DogViewSRCOUTActivity.class));
         addItem(myData, "GuaGuaCardViewSRCOUTActivity", new Intent(this, GuaGuaCardViewSRCOUTActivity.class));
         addItem(myData, "CircleWaveDSTINActivity", new Intent(this, CircleWaveDSTINActivity.class));
         addItem(myData, "HeartMapActivity", new Intent(this, HeartMapActivity.class));
         addItem(myData, "IrregularWaveViewActivity", new Intent(this, IrregularWaveViewActivity.class));
+        addItem(myData, "SaveLayerXfermodeActivity", new Intent(this, SaveLayerXfermodeActivity.class));
+
+        addItem(myData, "============> F <==========", null);
+        addItem(myData, "SaveLayerUseSkewActivity", new Intent(this, SaveLayerUseSkewActivity.class));
+        addItem(myData, "MATRIX_SAVE_FLAG_ViewActivity", new Intent(this, MATRIX_SAVE_FLAG_ViewActivity.class));
+
+        addItem(myData, "============> G <==========", null);
+        addItem(myData, "RedPointActivity", new Intent(this, RedPointActivity.class));
         return myData;
     }
 
