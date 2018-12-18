@@ -50,7 +50,11 @@
         <activity android:name=".E.SaveLayerXfermodeActivity" />
         <activity android:name=".F.SaveLayerUseSkewActivity" />
         <activity android:name=".F.MATRIX_SAVE_FLAG_ViewActivity" />
-        <activity android:name=".G.RedPointActivity"></activity>
+        <activity android:name=".G.RedPointActivity" />
+        <activity android:name=".G.ShadowLayerActivity" />
+        <activity android:name=".G.BlurMaskFilterActivity" />
+        <activity android:name=".G.ExtractAlphaActivity" />
+        <activity android:name=".G.BitShadowActivity"></activity>
     </application>
 
 </manifest>

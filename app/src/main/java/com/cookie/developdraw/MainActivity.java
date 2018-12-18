@@ -41,7 +41,11 @@ import com.cookie.developdraw.E.IrregularWaveViewActivity;
 import com.cookie.developdraw.E.SaveLayerXfermodeActivity;
 import com.cookie.developdraw.F.MATRIX_SAVE_FLAG_ViewActivity;
 import com.cookie.developdraw.F.SaveLayerUseSkewActivity;
+import com.cookie.developdraw.G.BitShadowActivity;
+import com.cookie.developdraw.G.BlurMaskFilterActivity;
+import com.cookie.developdraw.G.ExtractAlphaActivity;
 import com.cookie.developdraw.G.RedPointActivity;
+import com.cookie.developdraw.G.ShadowLayerActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -99,6 +103,10 @@ public class MainActivity extends ListActivity {
 
         addItem(myData, "============> G <==========", null);
         addItem(myData, "RedPointActivity", new Intent(this, RedPointActivity.class));
+        addItem(myData, "ShadowLayerActivity", new Intent(this, ShadowLayerActivity.class));
+        addItem(myData, "BlurMaskFilterActivity", new Intent(this, BlurMaskFilterActivity.class));
+        addItem(myData, "ExtractAlphaActivity", new Intent(this, ExtractAlphaActivity.class));
+        addItem(myData, "BitShadowActivity", new Intent(this, BitShadowActivity.class));
         return myData;
     }
 

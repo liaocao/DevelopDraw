@@ -6,18 +6,30 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PointF;
+import android.graphics.Rect;
 import android.graphics.RectF;
+import android.graphics.drawable.AnimationDrawable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.cookie.developdraw.R;
 
 public class RedPointView extends FrameLayout {
 
     private PointF mStartPoint, mCurPoint;
-    private int mRadius = 20;
+    private float DEFAULT_RADIUS = 20;
+    private float mRadius = DEFAULT_RADIUS;
+
     private Paint mPaint;
     private Path mPath;
-    private boolean mTouch;
+    private boolean mTouch = false, isAnimStart = false;
+    private TextView mTipTextView;
+    private ImageView exploredImageView;
 
     public RedPointView(Context context) {
         super(context);
@@ -44,14 +56,40 @@ public class RedPointView extends FrameLayout {
         mPaint.setStyle(Paint.Style.FILL);
 
         mPath = new Path();
+
+        LayoutParams params = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        mTipTextView = new TextView(getContext());
+        mTipTextView.setLayoutParams(params);
+        mTipTextView.setPadding(10, 10, 10, 10);
+        mTipTextView.setBackgroundResource(R.drawable.tv_bg);
+        mTipTextView.setTextColor(Color.GREEN);
+        mTipTextView.setText("99+");
+
+        exploredImageView = new ImageView(getContext());
+        exploredImageView.setLayoutParams(params);
+        exploredImageView.setImageResource(R.drawable.tip_anim);
+        exploredImageView.setVisibility(View.INVISIBLE);
+
+        addView(mTipTextView);
+        addView(exploredImageView);
     }
 
     @Override
     protected void dispatchDraw(Canvas canvas) {
         canvas.saveLayer(new RectF(0, 0, getWidth(), getHeight()), mPaint, Canvas.ALL_SAVE_FLAG);//为啥一定要保存呢
-        canvas.drawCircle(mStartPoint.x, mStartPoint.y, mRadius, mPaint);
-        if (mTouch) {
+
+
+        if (!mTouch || isAnimStart) {
+            mTipTextView.setX(mStartPoint.x - mTipTextView.getWidth() / 2);
+            mTipTextView.setY(mStartPoint.y - mTipTextView.getHeight() / 2);
+        }else{
+            calculatePath();
             canvas.drawCircle(mCurPoint.x, mCurPoint.y, mRadius, mPaint);
+            canvas.drawCircle(mStartPoint.x, mStartPoint.y, mRadius, mPaint);
+            canvas.drawPath(mPath, mPaint);
+            //将textview的中心放在当前手指位置
+            mTipTextView.setX(mCurPoint.x - mTipTextView.getWidth() / 2);//setX和setY就是设置左上角坐标的
+            mTipTextView.setY(mCurPoint.y - mTipTextView.getHeight() / 2);
         }
         canvas.restore();
         super.dispatchDraw(canvas);
@@ -61,11 +99,30 @@ public class RedPointView extends FrameLayout {
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN: {
-                mTouch = true;
+                // 判断触摸点是否在tipImageView中
+                Rect rect = new Rect();
+                int[] location = new int[2];
+                mTipTextView.getLocationOnScreen(location);
+                rect.left = location[0];
+                rect.top = location[1];
+                rect.right = mTipTextView.getWidth() + location[0];
+                rect.bottom = mTipTextView.getHeight() + location[1];
+                if (rect.contains((int) event.getRawX(), (int) event.getRawY())) {
+                    mTouch = true;
+                }
             }
             break;
             case MotionEvent.ACTION_UP: {
                 mTouch = false;
+                if(mRadius <= 9){
+                    isAnimStart = true;
+                    exploredImageView.setX(mCurPoint.x - mTipTextView.getWidth() / 2);
+                    exploredImageView.setY(mCurPoint.y - mTipTextView.getHeight() / 2);
+                    exploredImageView.setVisibility(View.VISIBLE);
+                    ((AnimationDrawable) exploredImageView.getDrawable()).start();
+
+                    mTipTextView.setVisibility(View.GONE);
+                }
             }
         }
         mCurPoint.set(event.getX(), event.getY());
@@ -85,6 +142,21 @@ public class RedPointView extends FrameLayout {
         double a = Math.atan(dy / dx);
         float offsetX = (float) (mRadius * Math.sin(a));
         float offsetY = (float) (mRadius * Math.cos(a));
+
+        float distance = (float) Math.sqrt(Math.pow(y-startY, 2) + Math.pow(x-startX, 2));//Math.pow(y-startY, 2) 应该就是y-startY的2次方
+        mRadius = DEFAULT_RADIUS - distance/15;//当距离增大时减少半径
+        if(mRadius<=9){
+            mRadius = 9;
+//            if(!mTouch){
+//                isAnimStart = true;
+//                exploredImageView.setX(mCurPoint.x - mTipTextView.getWidth() / 2);
+//                exploredImageView.setY(mCurPoint.y - mTipTextView.getHeight() / 2);
+//                exploredImageView.setVisibility(View.VISIBLE);
+//                ((AnimationDrawable) exploredImageView.getDrawable()).start();
+//
+//                mTipTextView.setVisibility(View.GONE);
+//            }
+        }
 
         // 根据角度算出四边形的四个点
         float x1 = startX + offsetX;
