@@ -54,7 +54,15 @@
         <activity android:name=".G.ShadowLayerActivity" />
         <activity android:name=".G.BlurMaskFilterActivity" />
         <activity android:name=".G.ExtractAlphaActivity" />
-        <activity android:name=".G.BitShadowActivity"></activity>
+        <activity android:name=".G.BitShadowActivity" />
+        <activity android:name=".G.ShaderTileActivity" />
+        <activity android:name=".H.TelescopeActivity" />
+        <activity android:name=".H.MyAvatorActivity" />
+        <activity android:name=".H.LinearGradientActivity" />
+        <activity android:name=".H.LinearGradientTextActivity" />
+        <activity android:name=".H.ShimmerTextActivity" />
+        <activity android:name=".H.DoubleColorRadialGradientActivity" />
+        <activity android:name=".H.RadialGradientTouchActivity"></activity>
     </application>
 
 </manifest>

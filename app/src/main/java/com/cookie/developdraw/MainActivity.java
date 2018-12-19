@@ -45,7 +45,15 @@ import com.cookie.developdraw.G.BitShadowActivity;
 import com.cookie.developdraw.G.BlurMaskFilterActivity;
 import com.cookie.developdraw.G.ExtractAlphaActivity;
 import com.cookie.developdraw.G.RedPointActivity;
+import com.cookie.developdraw.G.ShaderTileActivity;
 import com.cookie.developdraw.G.ShadowLayerActivity;
+import com.cookie.developdraw.H.DoubleColorRadialGradientActivity;
+import com.cookie.developdraw.H.LinearGradientActivity;
+import com.cookie.developdraw.H.LinearGradientTextActivity;
+import com.cookie.developdraw.H.MyAvatorActivity;
+import com.cookie.developdraw.H.RadialGradientTouchActivity;
+import com.cookie.developdraw.H.ShimmerTextActivity;
+import com.cookie.developdraw.H.TelescopeActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -107,6 +115,15 @@ public class MainActivity extends ListActivity {
         addItem(myData, "BlurMaskFilterActivity", new Intent(this, BlurMaskFilterActivity.class));
         addItem(myData, "ExtractAlphaActivity", new Intent(this, ExtractAlphaActivity.class));
         addItem(myData, "BitShadowActivity", new Intent(this, BitShadowActivity.class));
+        addItem(myData, "ShaderTileActivity", new Intent(this, ShaderTileActivity.class));
+        addItem(myData, "============> H <==========", null);
+        addItem(myData, "TelescopeActivity", new Intent(this, TelescopeActivity.class));
+        addItem(myData, "MyAvatorActivity", new Intent(this, MyAvatorActivity.class));
+        addItem(myData, "LinearGradientActivity", new Intent(this, LinearGradientActivity.class));
+        addItem(myData, "LinearGradientTextActivity", new Intent(this, LinearGradientTextActivity.class));
+        addItem(myData, "ShimmerTextActivity", new Intent(this, ShimmerTextActivity.class));
+        addItem(myData, "DoubleColorRadialGradientActivity", new Intent(this, DoubleColorRadialGradientActivity.class));
+        addItem(myData, "RadialGradientTouchActivity", new Intent(this, RadialGradientTouchActivity.class));
         return myData;
     }
 
